@@ -17,3 +17,16 @@ function displayPost(posts) {
     console.log(post.title);
   }
 }
+function addAPost() {
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify({
+      title: "My New Post",
+      body: "This is my post",
+      userId: 1,
+    }),
+    headers: {
+      "content-tyoe": "aplication/json; charset-UTF-8",
+    },
+  });
+}
